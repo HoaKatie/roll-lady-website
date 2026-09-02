@@ -35,7 +35,7 @@ a {
 ========================= */
 
 .navbar {
-    height: 150px;
+    height: 100px;
     padding: 0 6%;
     display: flex;
     align-items: center;
@@ -43,9 +43,19 @@ a {
     background: #f8f5ed;
 }
 
+.logo {
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo img {
-    width: 120px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 /* .logo, */
