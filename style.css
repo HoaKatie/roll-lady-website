@@ -1,6 +1,458 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #24352b;
+    background: #f8f5ed;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 150px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f5ed;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* .logo, */
+.footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.nav-button {
+    border: 1px solid #24352b;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background: #24352b;
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 6%;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(60px, 8vw, 110px);
+    line-height: 0.92;
+    letter-spacing: -5px;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 480px;
+    font-size: 19px;
+    margin-bottom: 35px;
+}
+
+.primary-button {
+    display: inline-block;
+    background: #24352b;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.primary-button:hover {
+    opacity: 0.85;
+}
+
+.hero-image {
+    height: 650px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    padding: 140px 10%;
+    background: #e5ead8;
+}
+
+.story h2,
+.culture h2,
+.birth h2,
+.join h2 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.story-content {
+    max-width: 600px;
+    margin-left: 45%;
+    margin-top: 70px;
+}
+
+.story-content p {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CULTURE
+========================= */
+
+.culture {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 700px;
+}
+
+.culture-image {
+    min-height: 600px;
+}
+
+.culture-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.culture-text {
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.culture-text h2 {
+    margin-bottom: 35px;
+}
+
+.culture-text p:not(.eyebrow) {
+    max-width: 500px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PRODUCT BIRTH
+========================= */
+
+.birth {
+    text-align: center;
+    padding: 150px 6%;
+    background: #24352b;
+    color: #f8f5ed;
+}
+
+.birth-description {
+    max-width: 550px;
+    margin: 35px auto 0;
+    font-size: 19px;
+}
+
+.mat-placeholder {
+    max-width: 650px;
+    height: 350px;
+    margin: 70px auto 0;
+    border: 1px solid rgba(255,255,255,0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-placeholder span {
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+
+.mat-placeholder small {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+
+/* =========================
+   SIMPLE STEPS
+========================= */
+
+.simple {
+    padding: 150px 8%;
+}
+
+.simple h2 {
+    font-size: clamp(60px, 9vw, 120px);
+    line-height: 0.85;
+    letter-spacing: -6px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.step span {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.step h3 {
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+.step p {
+    max-width: 300px;
+}
+
+
+/* =========================
+   SIGN UP
+========================= */
+
+.join {
+    background: #d7dfc9;
+    padding: 150px 6%;
+}
+
+.join-inner {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    margin: auto;
+}
+
+.join h2 {
+    margin-bottom: 30px;
+}
+
+.join-inner > p:not(.eyebrow) {
+    max-width: 550px;
+    font-size: 19px;
+}
+
+.signup-form {
+    max-width: 600px;
+    margin-top: 60px;
+}
+
+.signup-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.signup-form label span {
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #9da695;
+    background: #f8f5ed;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.signup-form input:focus {
+    border-color: #24352b;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 17px;
+    background: #24352b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    opacity: 0.85;
+}
+
+.privacy {
+    text-align: center;
+    font-size: 12px !important;
+    opacity: 0.6;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #18251e;
+    color: #f8f5ed;
+    padding: 60px 6%;
+}
+
+footer p {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 5%;
+    }
+
+    h1 {
+        font-size: 65px;
+        letter-spacing: -4px;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+
+    .story {
+        padding: 100px 7%;
+    }
+
+    .story-content {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    .story-content p {
+        font-size: 18px;
+    }
+
+    .culture {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-image {
+        min-height: 400px;
+    }
+
+    .culture-text {
+        padding: 80px 7%;
+    }
+
+    .birth {
+        padding: 100px 7%;
+    }
+
+    .mat-placeholder {
+        height: 250px;
+    }
+
+    .simple {
+        padding: 100px 7%;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-top: 70px;
+    }
+
+    .join {
+        padding: 100px 7%;
+    }
+
+    .join h2,
+    .story h2,
+    .culture h2,
+    .birth h2 {
+        letter-spacing: -3px;
+    }
 }
