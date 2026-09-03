@@ -287,6 +287,18 @@ h1 {
    SIGN UP
 ========================= */
 
+/* =========================
+   GOOGLE FORM
+========================= */
+
+.google-form {
+    width: 100%;
+    height: 900px;
+    border: none;
+    margin-top: 50px;
+    background: transparent;
+}
+
 .join {
     background: #d7dfc9;
     padding: 150px 6%;
